@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Armstrong number</title>
+
+</head>
+
+<body>
+
+<script>
+
+var res,i, rem, n;
+
+function armstrong()
+
+{
+
+  for(i=100; i<1000; i++)
+
+  {
+
+    //if(i>99 && i<1000)
+
+    n=i;
+
+    res=0;
+
+    while(n!=0)
+
+    {
+
+      rem=n%10;
+
+      n=parseInt(n/10);
+
+      res=res+rem**3;
+
+    }
+
+    if(res==i)
+
+    {
+
+      document.write(res+"<br>");
+
+    }   
+
+   }
+
+  return 0;
+
+}
+
+armstrong();
+
+</script>
+
+</body>
+
+</html>
