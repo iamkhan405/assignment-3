@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Credit Card Validation </title>
+
+<script>
+
+function validateCreditCard(txt)
+
+{
+
+var a=(txt%10);
+
+var b=(a%2);
+
+var n=/^(?=\d{16})(\d)\1*(?!\1)\d+$/;
+
+if(txt.match(n) && b==0)
+
+{ 
+
+return true;
+
+}
+
+ var sum = 0;
+
+  for(var i = 0; i < txt.length; i++)
+
+  {
+
+    sum +=(txt%10);
+
+    txt=Math.floor(txt/10);
+
+  }
+
+  if(sum <= 16)
+
+  {
+
+    return false;
+
+  }
+
+return false;
+
+}
+
+document.write(validateCreditCard('9999777788880000'));
+
+document.write("<br>");
+
+document.write(validateCreditCard('6666666666661666'));
+
+document.write("<br>");
+
+document.write(validateCreditCard('a92332119c011112'));
+
+document.write("<br>");
+
+document.write(validateCreditCard('4444444444444444'));
+
+document.write("<br>");
+
+document.write(validateCreditCard('1111111111111114'));
+
+document.write("<br>");
+
+document.write(validateCreditCard('6666666666666661'));
+
+</script>   
+
+</head>
+
+<body>
+
+</body>
+
+</html>
