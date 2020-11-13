@@ -1,0 +1,47 @@
+<html>
+
+<head>
+
+<title>LCM of two numbers</title>
+
+</head>
+
+<body>
+
+<script>
+
+function lcm_two_numbers(n1, n2)
+
+{
+
+var max = (n1 > n2) ? n1: n2;
+
+while (true) 
+
+{
+
+  if (max % n1 == 0 && max % n2 == 0) 
+
+  {
+
+    return max+"<br>";
+
+    break;
+
+  }
+
+  max++;
+
+}
+
+}
+
+document.write(lcm_two_numbers(3,15));
+
+document.write(lcm_two_numbers(10,15));
+
+</script>
+
+</body>
+
+</html>
